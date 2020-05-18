@@ -5,7 +5,7 @@ RUN apt-get update && apt-get upgrade -y \
 
 ENV MONGODB_VERSION 3.2.22
 
-COPY --from=hinchliff/rpi2-mongodb-compile /usr/local/bin/mongod /usr/local/bin/
+COPY --from=hinchliff/rpi2-mongodb-compile:debug /usr/local/bin/mongod /usr/local/bin/
 
 # unifi version
 # From: https://www.ubnt.com/download/unifi/
