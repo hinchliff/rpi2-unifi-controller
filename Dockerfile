@@ -9,7 +9,7 @@ COPY --from=hinchliff/rpi2-mongodb-compile /usr/local/bin/mongod /usr/local/bin/
 
 # unifi version
 # From: https://www.ubnt.com/download/unifi/
-ENV UNIFI_VERSION "5.12.72"
+ENV UNIFI_VERSION "5.13.29"
 
 RUN apt-get update && apt-get install -y \
     binutils \
@@ -17,6 +17,7 @@ RUN apt-get update && apt-get install -y \
     openjdk-8-jre-headless \
     curl \
     gosu \
+    logrotate \
     --no-install-recommends \
  && rm -rf /var/lib/apt/lists/*
 
