@@ -21,7 +21,7 @@ RUN apt-get update && apt-get install -y \
  && rm -rf /var/lib/apt/lists/*
 
  #&& dpkg --force-all -i /tmp/unifi.deb \
-RUN curl -o /tmp/unifi.deb -L "https://dl.ubnt.com/unifi/${UNIFI_VERSION}/unifi_sysvinit_all.deb" \
+RUN curl -o /tmp/unifi.deb -L "https://dl.ui.com/unifi/${UNIFI_VERSION}/unifi_sysvinit_all.deb" \
  && dpkg --ignore-depends=mongodb-server -i /tmp/unifi.deb \
  && rm -rf /tmp/unifi.deb
 
