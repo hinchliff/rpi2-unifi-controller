@@ -9,7 +9,7 @@ COPY --from=hinchliff/rpi2-mongodb-compile /usr/local/bin/mongod /usr/local/bin/
 
 # unifi version
 # From: https://www.ubnt.com/download/unifi/
-ENV UNIFI_VERSION "6.0.43"
+ENV UNIFI_VERSION "6.0.45"
 
 RUN apt-get update && apt-get install -y \
     binutils \
