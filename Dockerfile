@@ -1,4 +1,4 @@
-FROM multiarch/ubuntu-core:armhf-xenial
+FROM multiarch/ubuntu-core:armhf-focal
 
 RUN apt-get update && apt-get upgrade -y \
  && rm -rf /var/lib/apt/lists/*
@@ -18,6 +18,7 @@ RUN apt-get update && apt-get install -y \
     curl \
     gosu \
     logrotate \
+    libcap2 \
     --no-install-recommends \
  && rm -rf /var/lib/apt/lists/*
 
